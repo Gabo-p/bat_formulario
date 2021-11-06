@@ -37,6 +37,7 @@
                     </div>
                 </div>
             </li>
+            <li class="nav-separador"></li>
             <li class="nav-item">
                 <a href="" class="nav-link" style="display: inline-block;color:rgba(90, 90, 90, 1);"><i class="fa fa-search" aria-hidden="true" style="font-size:18px;margin-bottom:15px;"></i></a>
             </li>

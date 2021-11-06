@@ -1738,8 +1738,6 @@ function mobileMenu() {
   bgmodal.classList.toggle("active");
 }
 
-const navLink = document.querySelectorAll(".nav-link");
-
 $("#bgmodal").on("click", () => closeMenu());
 
 function closeMenu() {

@@ -766,8 +766,8 @@ width: 100%;
   width: 190px;
   padding: 20px;
   position: absolute;
-  bottom: -100px;
-  left: -40px;
+  bottom: -150px;
+  left: 5%;
   z-index: 10000;
   background-color: white;
   border-radius: 3px;
@@ -776,6 +776,8 @@ width: 100%;
 
 .droplink:hover ~ .dropdown {
   opacity: 1;
+  bottom: -100px;
+  left: 5%;
 }
 
 .droplink i {
@@ -933,11 +935,24 @@ footer .links ul li a {
     padding: 0.7rem 0;
     border-bottom: 1px dotted rgba(90, 90, 90, 1);
   }
+  .dropitem {
+    border-bottom: 1px dotted rgba(90, 90, 90, 1);
+    padding-bottom: 0.7rem;
+    background-color: transparent !important;
+  }
+  .dropdown{
+    background-color: transparent;
+  }
+  .droplink:hover ~ .dropdown {
+    bottom: -110px;
+  }
+
+
   .nav-item:last-child {
     border-bottom: 0px;
     text-align: center;
   }
-  
+
   .hamburger {
     display: block;
     cursor: pointer;
@@ -979,6 +994,9 @@ footer .links ul li a {
   .modalIn {
     padding: 15px 5px;
   }
+  .nav-menu {
+    width: 50%;
+  }
 }
 
 @media only screen and (max-width: 875px) {
@@ -989,11 +1007,17 @@ footer .links ul li a {
   .lineafooter {
     width: 90% !important;
   }
+  .nav-menu {
+    width: 65%;
+  }
 }
 
 @media only screen and (max-width: 562px) {
   input[type="search"] {
     width: 85%;
+  }
+  .nav-menu {
+    width: 60%;
   }
 }
 
@@ -1017,11 +1041,17 @@ footer .links ul li a {
   .modal {
     padding: 20px;
   }
+  .nav-menu {
+    width: 70%;
+  }
 }
 
 @media only screen and (max-width: 483px) {
   #modallabel {
     width: 80%;
+  }
+  .nav-menu {
+    width: 70%;
   }
 }
 
@@ -1056,6 +1086,9 @@ footer .links ul li a {
   .formulariofinal {
     padding: 20px 3px;
   }
+  .nav-menu {
+    width: 80%;
+  }
 }
 
 @media only screen and (max-width: 331px) {
@@ -1070,5 +1103,9 @@ footer .links ul li a {
   }
   .nav-menu {
     width: 90%;
+  }
+  .dropdown{
+    width: 400px;
+    background-color: transparent;
   }
 }
