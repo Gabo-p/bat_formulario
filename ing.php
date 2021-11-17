@@ -28,7 +28,7 @@
                 <div class="dropdown">
                     <div style="margin-bottom: 15px;" class="dropitem">
                         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAMAAABBPP0LAAAAmVBMVEViZsViZMJiYrf9gnL8eWrlYkjgYkjZYkj8/PujwPybvPz4+PetraBEgfo+fvo3efkydfkqcvj8Y2T8UlL8Q0P8MzP9k4Hz8/Lu7u4DdPj9/VrKysI9fPoDc/EAZ7z7IiLHYkjp6ekCcOTk5OIASbfY/v21takAJrT5Dg6sYkjc3Nn94t2RkYD+y8KeYkjs/v7l5fz0dF22YkjWvcOLAAAAgElEQVR4AR2KNULFQBgGZ5J13KGGKvc/Cw1uPe62eb9+Jr1EUBFHSgxxjP2Eca6AfUSfVlUfBvm1Ui1bqafctqMndNkXpb01h5TLx4b6TIXgwOCHfjv+/Pz+5vPRw7txGWT2h6yO0/GaYltIp5PT1dEpLNPL/SdWjYjAAZtvRPgHJX4Xio+DSrkAAAAASUVORK5CYII=" alt="Español" style="display: inline-block; " width="15">
-                        <a href="?lang=ing" class="nav-link" style="margin-bottom: 10px;">Ingles</a>
+                        <a href="?lang=ing" class="nav-link" style="margin-bottom: 10px;">English</a>
                     </div>
                     
                     <div class="dropitem">
@@ -121,7 +121,7 @@
             <input type="text" placeholder="Invoice Number" name="numfactura">
             <h5>Invoice delivery date</h5>
             <input type="date" name="fechaemision">
-            <textarea name="textarea" rows="10" cols="50" name="adicional" onfocus=" " placeholder="Write more information about your case:"></textarea>
+            <textarea rows="10" cols="50" name="adicional" onfocus=" " placeholder="Write more information about your case:"></textarea>
             <input type="submit" value="Send Query">
         </form>
     </section>

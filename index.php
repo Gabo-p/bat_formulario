@@ -6,26 +6,34 @@ function limpiarDatos($datos)
     $datos = htmlspecialchars($datos);
     return $datos;
 }
+$enviado = false;
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-    $correo = 'INGRESE UN CORREO AQUI';
-    $asunto = '¡Una persona ha llenado el formulario!';
 
-    $contenido = '<b> Nombre:' . limpiarDatos($_POST['nombre']) . '</b><br/>';
-    $contenido .= '<b> Correo:' . limpiarDatos($_POST['correo']) . '</b><br/>';
-    $contenido .= '<b> Identificación:' . limpiarDatos($_POST['identificacion']) . '</b><br/>';
-    $contenido .= '<b> Numero de Compra:' . limpiarDatos($_POST['numcompra']) . '</b><br/>';
-    $contenido .= '<b> EIDCOM:' . limpiarDatos($_POST['edicom']) . '</b><br/>';
-    $contenido .= '<b> Numero de Factura:' . limpiarDatos($_POST['numfactura']) . '</b><br/>';
-    $contenido .= '<b> Fecha:' . limpiarDatos($_POST['fechaemision']) . '</b><br/>';
-    $contenido .= '<b> Mensaje Adicional:' . limpiarDatos($_POST['adicional']) . '</b><br/>';
+    $to = 'Fsd_Ame@Bat.Com';
+    $from = 'info@batsupplier.com';
+    $subject = '¡Una persona ha llenado el formulario!';
 
-
-    $headers = 'From:' . $correo;
-    $headers .= 'Content-type:text/html;charset=UTF-8';
-
-
-    mail($correo, $asunto, $contenido, $headers);
+    $headers  = 'MIME-Version: 1.0' . "\r\n";
+    $headers .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
+    $headers .= 'From: '.$from."\r\n".
+    'Reply-To: '.$from."\r\n" .
+    'X-Mailer: PHP/' . phpversion();
+    
+    
+    $contenido = '<b> Nombre:</b>' . limpiarDatos($_POST['nombre']) . '<br/>';
+    $contenido .= '<b> Correo:</b>' . limpiarDatos($_POST['correo']) . '<br/>';
+    $contenido .= '<b> Identificación:</b>' . limpiarDatos($_POST['identificacion']) . '<br/>';
+    $contenido .= '<b> Numero de Compra:</b>' . limpiarDatos($_POST['numcompra']) . '<br/>';
+    $contenido .= '<b> Numero de Factura:</b>' . limpiarDatos($_POST['numfactura']) . '<br/>';
+    $contenido .= '<b> Fecha:</b>' . limpiarDatos($_POST['fechaemision']) . '<br/>';
+    $contenido .= '<b> Mensaje Adicional:</b>' . limpiarDatos($_POST['adicional']) . '<br/>';
+    
+    if(mail($to, $subject, $contenido, $headers)){
+        $enviado = true;
+    } else{
+        $enviado = false;
+    }
 }
 
 
@@ -53,7 +61,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 
 <body>
-
+    <div class="snackBar">
+        Correo Enviado
+    </div>
     <?php 
         if(!isset($_GET['lang']) || $_GET['lang'] == 'ing'){
             include_once './ing.php';

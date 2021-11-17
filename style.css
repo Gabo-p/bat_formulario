@@ -722,6 +722,7 @@ a {
   margin-left: 2.2rem;
   font-weight: 500 !important;
   font-family: "Aeroport Medium";
+  /* text-indent: 5px; */
 }
 
 .nav-logo {
@@ -764,19 +765,18 @@ width: 100%;
   display: block;
   opacity: 0;
   width: 190px;
-  padding: 20px;
+  padding: 30px 20px;
   position: absolute;
-  bottom: -150px;
+  bottom: -130px;
   left: 5%;
   z-index: 10000;
   background-color: white;
-  border-radius: 3px;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .droplink:hover ~ .dropdown {
   opacity: 1;
-  bottom: -100px;
+  bottom: -110px;
   left: 5%;
 }
 
@@ -786,6 +786,8 @@ width: 100%;
 
 .dropdown:hover {
   opacity: 1;
+  bottom: -110px;
+  /* display: none;   */
 }
 
 .droplink {
@@ -890,6 +892,29 @@ footer .links ul li a {
   z-index: 90000;
   display: none;
 }
+
+
+.snackBar{
+  width: 25%;
+  display: block;
+  padding: 10px 20px;
+  text-align: center;
+  color: #fff;
+  background-color: #39b12ecd;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  position: absolute;
+  top: 15%;
+  right: -500px;
+  z-index: 1000;
+  animation-name: SlideInLeft;
+  animation-duration: 3s;
+}
+
+
+
+
 
 @media screen and (max-width: 1300px) {
   .navbar {
@@ -1108,4 +1133,23 @@ footer .links ul li a {
     width: 400px;
     background-color: transparent;
   }
+}
+
+
+
+@keyframes SlideInLeft {
+  
+  0%{
+    right: -500px;
+  }
+  20%{
+    right: 30px;
+  }
+  80%{
+    right: 30px;
+  }
+  100%{
+    right: -500px;
+  }
+
 }
